@@ -37,13 +37,6 @@ const ChampForm = (props) => {
 }
 
 
-const mapStateToPros= (state) => {
-    return{
-        title: state.title,
-        name: state.name,
-        image: state.image,
-        story: state.story,
-    }
-}
 
-export default connect(mapStateToPros,{getChamp}) (ChampForm);
+
+export default connect(null,{getChamp}) (ChampForm);

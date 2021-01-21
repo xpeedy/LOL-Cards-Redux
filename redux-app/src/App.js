@@ -12,7 +12,7 @@ function App() {
     <div className="App">
         <ChampForm />
         <Champion />
-        {/* <ChampList /> */}
+        <ChampList />
     </div>
   );
 }

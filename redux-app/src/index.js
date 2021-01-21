@@ -10,7 +10,7 @@ import reducer from "./reducers/reducer";
 
 export const API_KEY = "RGAPI-4f5d0807-fcca-4d80-b79f-11c793a19b50"
 
-const store = createStore(reducer, applyMiddleware(thunk))
+const store = createStore(reducer, applyMiddleware(thunk,))
 
 ReactDOM.render(
   <React.StrictMode>
