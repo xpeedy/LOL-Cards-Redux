@@ -16,7 +16,7 @@ const ChampForm = (props) => {
         props.getChamp(value.inputValue)
         setValue({inputValue:""})
     }
-    
+    // console.log(props)
     
 
     return(
@@ -41,10 +41,9 @@ const mapStateToPros= (state) => {
     return{
         title: state.title,
         name: state.name,
-        image: "",
+        image: state.image,
         story: state.story,
     }
-    
 }
 
 export default connect(mapStateToPros,{getChamp}) (ChampForm);

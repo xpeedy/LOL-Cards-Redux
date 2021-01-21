@@ -1,8 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
 
 
 const Champion = (props) => {
-     console.log(props.name)
+    //  console.log(props)
     return(
         <>
         <p>{}</p>
@@ -13,4 +14,13 @@ const Champion = (props) => {
     )
 }
 
-export default Champion;
+const mapStateToPros= (state) => {
+    return{
+        title: state.title,
+        name: state.name,
+        image: state.image,
+        story: state.bulrb,
+    }
+}
+
+export default connect(mapStateToPros,{})(Champion);

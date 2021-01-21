@@ -11,9 +11,9 @@ const reducer = (state = initialState, action) => {
     switch(action.type) {
         case FETCH_CHAMPION :
             return{...state,
-            title: state.title,
+            title: state.payload,
             name: action.payload,
-            image: state.image.full,
+            image: state.image,
             story: state.blurb
         }
         case FETCH_CHAMPION_FAIL:
