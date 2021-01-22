@@ -1,5 +1,5 @@
 import React from "react";
-import Champion from "./champ";
+
 import { connect } from "react-redux"
 
 const ChampList = (props) => {

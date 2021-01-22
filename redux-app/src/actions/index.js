@@ -19,8 +19,13 @@ export const getChamp = (name) => dispatch => {
         //         return dispatch({ type:FETCH_CHAMPION, payload: res.data.data })
         //     }
         // })
-        dispatch({ type:FETCH_CHAMPION_LIST, payload: res.data.data })
-        console.log(dispatch({ type:FETCH_CHAMPION_LIST, payload: res.data.data }))
+        const newArray = []
+        for (let i in res.data.data ){
+            newArray.push(res.data.data[i])
+        }
+
+        dispatch({ type:FETCH_CHAMPION_LIST, payload: newArray })
+        console.log(dispatch({ type:FETCH_CHAMPION_LIST, payload: newArray }))
 
         dispatch({ type:GET_CHAMPION, payload:name })
         console.log(dispatch({ type:GET_CHAMPION, payload:name }))

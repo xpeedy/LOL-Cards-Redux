@@ -1,8 +1,7 @@
 import logo from './logo.svg';
-import axios from "axios"
-import './App.css';
+
 import ChampForm from './components/champForm';
-import ChampList from './components/champList';
+
 import Champion from './components/champ';
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
     <div className="App">
         <ChampForm />
         <Champion />
-        <ChampList />
+        {/* <ChampList /> */}
     </div>
   );
 }
