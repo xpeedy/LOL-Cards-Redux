@@ -1,7 +1,4 @@
-import logo from './logo.svg';
-
 import ChampForm from './components/champForm';
-
 import Champion from './components/champ';
 
 function App() {
@@ -11,7 +8,6 @@ function App() {
     <div className="App">
         <ChampForm />
         <Champion />
-        {/* <ChampList /> */}
     </div>
   );
 }

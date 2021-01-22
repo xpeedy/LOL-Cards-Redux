@@ -4,26 +4,34 @@ import { connect } from "react-redux";
 
 const Champion = (props) => {
     //  console.log(props[0].title)
-    //  console.log(props.championInfo.title)
-    
+    const {championInfo, image} = props
+    //  console.log(props)
+    //  console.log("hello",championInfo)
+    //  console.log("here",image)
+
     return(
         <>
-        {props[0]? 
+        {championInfo[0]? 
         <div>
-        <p>{props[0].title}</p>
-        <p>{props[0].name}</p>
-        <p>{props[0].image.full}</p>
-        <p>{props[0].blurb}</p>
-        </div>
-            : ""}
-        
+            <p>{championInfo[0].title}</p>
+            <p>{championInfo[0].name}</p>
+            <img src={image} alt={championInfo[0].name}></img>
+            <p>{championInfo[0].blurb}</p>
+        </div> : ""}
         </>
     )
+    
 }
 
 const mapStateToProps= (state) => {
-    // console.log(state)
-    return state.championInfo
+
+    return state
+    
+    // const {championInfo, image} = state
+    // console.log(championInfo,image,state)
+    // return championInfo
+
+    // return state.championInfo
        
         // championInfo: {
         //     title: state.title, //.title
@@ -34,4 +42,4 @@ const mapStateToProps= (state) => {
     
 }
 
-export default connect(mapStateToProps,{})(Champion);
+export default connect(mapStateToProps)(Champion);
