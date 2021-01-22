@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import styled from "styled-components";
 
 
 const Champion = (props) => {
@@ -12,12 +13,12 @@ const Champion = (props) => {
     return(
         <>
         {championInfo[0]? 
-        <div>
-            <p>{championInfo[0].title}</p>
-            <p>{championInfo[0].name}</p>
+        <ChampInfoDiv>
+            <h1>{championInfo[0].name}</h1>
+            <h3>{championInfo[0].title}</h3>
             <img src={image} alt={championInfo[0].name}></img>
             <p>{championInfo[0].blurb}</p>
-        </div> : ""}
+        </ChampInfoDiv> : ""}
         </>
     )
     
@@ -43,3 +44,25 @@ const mapStateToProps= (state) => {
 }
 
 export default connect(mapStateToProps)(Champion);
+
+
+const ChampInfoDiv = styled.div`
+/* border:solid red; */
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-top: -43%;
+color:white;
+
+
+p {
+    /* border:solid green; */
+    width: 12%;
+    text-align:center;
+    font-size: 120%;
+    margin-right:-30%;
+    margin-top:-15%;
+    margin-bottom:5.5%;
+    /* color:whitesmoke; */
+}
+`

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {connect} from "react-redux";
+import styled from "styled-components";
 import { getChamp } from "../actions";
 
 
@@ -21,7 +22,8 @@ const ChampForm = (props) => {
 
     return(
         <>
-        <form onSubmit={onClick}>
+        <H1>League Of Legends Champion Card</H1>
+        <Form onSubmit={onClick}>
             <label htmlFor="id">
                 <input 
                 type="text"
@@ -31,7 +33,7 @@ const ChampForm = (props) => {
                 />
             </label>
             <button>Enter</button>
-        </form>
+        </Form>
         </>
     )
 }
@@ -40,3 +42,18 @@ const ChampForm = (props) => {
 
 
 export default connect(null,{getChamp}) (ChampForm);
+
+
+const Form = styled.form`
+border: solid black;
+margin-top: 20%;
+margin-bottom: 44.5%;
+
+
+`
+
+const H1 = styled.h1`
+margin-bottom: -20%;
+margin-top: -20;
+color:white;
+`

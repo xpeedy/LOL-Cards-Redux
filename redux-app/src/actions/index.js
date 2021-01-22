@@ -19,7 +19,7 @@ export const getChamp = (name) => (dispatch) => {
       // console.log(dispatch({ type:FETCH_CHAMPION_LIST, payload: newArray }))
 
       dispatch({ type: GET_CHAMPION, payload: name });
-      console.log(dispatch({ type: GET_CHAMPION, payload: name }));
+    //   console.log(dispatch({ type: GET_CHAMPION, payload: name }));
     })
     .catch((err) => {
       console.log(err);
