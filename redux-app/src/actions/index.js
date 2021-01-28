@@ -7,7 +7,7 @@ export const getChamp = (name) => (dispatch) => {
   // dispatch({type: FETCH_CHAMPION});
   axios
     .get(
-      `http://ddragon.leagueoflegends.com/cdn/11.1.1/data/en_US/champion.json`
+      `https://ddragon.leagueoflegends.com/cdn/11.1.1/data/en_US/champion.json`
     )
     .then((res) => {
       const newArray = [];
@@ -27,7 +27,7 @@ export const getChamp = (name) => (dispatch) => {
 
   axios
     .get(
-      `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${name}_0.jpg`
+      `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${name}_0.jpg`
     )
     .then((res) => {
       // console.log(res.config.url)
